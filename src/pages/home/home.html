@@ -1,14 +1,51 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      Filmy
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addRecord()">
+        <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <ion-list>
+    <ion-card class="movie" text-wrap *ngFor="let movie of movies | async">
+      <ion-item>
+        <h2> {{ movie.title }} </h2>
+        <small>{{ movie.year }}  ({{ movie.duration }})</small>
+        <p>{{ movie.summary }}</p>
+
+        <section class="multiples">
+          <h3>Aktorzy</h3>
+          <ion-chip *ngFor="let actor of movie.actors" padding-left padding-right margin-right>
+            {{ actor.name }}
+          </ion-chip>
+        </section>
+
+        <section class="multiples">
+          <h3>Gatunek</h3>
+          <ion-chip *ngFor="let genre of movie.genres" padding-left padding-right margin-right>
+            {{ genre.name }}
+          </ion-chip>
+        </section>
+
+        <div class="manage-record" padding>
+          <button ion-button text-center color="primary" (click)="editMovie(movie)">
+          Edycja
+          </button>
+
+          <button ion-button text-center color="primary" (click)="deleteMovie(movie)">
+          Usuń
+          </button>
+
+        </div>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+
 </ion-content>
