@@ -6,6 +6,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { config  } from '../config/config';
+import { HttpModule } from '@angular/http';
+import { AngularFireModule } from 'angularfire2';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    HttpModule,
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(config.firebase)
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
