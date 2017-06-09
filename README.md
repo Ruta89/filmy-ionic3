@@ -1,26 +1,13 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
-## How to use this template
+## Movies Ionic3 angularfire2  app
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+![Alt text](/src/assets/img/FilmyGh.png?raw=true "IonicApp")
+![Alt text](/src/assets/img/FilmyGh2.png?raw=true "IonicApp")
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+Tutorial [Integrating Firebase into an Ionic app with AngularFire2 part 1](http://masteringionic.com/blog/2017-02-23-integrating-firebase-into-an-ionic-app-with-angularfire2-part-1/).
 
-### With the Ionic CLI:
+ [Integrating Firebase into an Ionic app with AngularFire2 part 2](http://masteringionic.com/blog/2017-02-24-integrating-firebase-into-an-ionic-app-with-angularfire2-part-2/).
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+### Ionic3 and 4.0.0-rc.1
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
-
-Then, to run it, cd into `myBlank` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+List, add, update and delete Movies

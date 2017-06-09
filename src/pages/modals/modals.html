@@ -4,7 +4,7 @@
       Film: {{ movieName }}
     </ion-title>
     <ion-buttons start>
-      <button ion-button color="primary" (click)="closeModal()">
+      <button ion-button color="color2" (click)="closeModal()">
         <span showWhen="ios">Anuluj</span>
         <ion-icon name="md-close"  showWhen="android, windows"></ion-icon>
       </button>
@@ -105,7 +105,7 @@
 
     <ion-item>
       <input type="hidden" name="movieId">
-      <button ion-button block color="primary" text-center [disabled]="!form.valid"> 
+      <button ion-button block color="color2" text-center [disabled]="!form.valid"> 
       <div *ngIf="!isEditable"> 
         Dodaj nowy Film
       </div>
