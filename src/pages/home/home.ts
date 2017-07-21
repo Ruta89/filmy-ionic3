@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController, ModalController, Platform } from 'ionic-angular';
+import { NavController, ModalController, Platform, IonicPage } from 'ionic-angular';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import 'rxjs/add/operator/map';
 //import * as firebase from 'firebase';
 
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
